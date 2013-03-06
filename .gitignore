@@ -6,3 +6,9 @@
 *.csproj
 *.unityproj
 *.sln
+
+Temp
+
+.DS_Store
+
+*.bak
