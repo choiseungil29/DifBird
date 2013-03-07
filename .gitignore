@@ -6,6 +6,11 @@
 *.csproj
 *.unityproj
 *.sln
+*.suo
+*.userprefs
+*.pidb
+*.swp
+*.nib
 
 Temp
 
