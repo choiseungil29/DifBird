@@ -16,4 +16,12 @@ Temp
 
 .DS_Store
 
+# Sublime Text 2 files
+*.sublime-settings
+*.sublime-project
+*.sublime-workspace
+
+
+# Garbage code
 *.bak
+*.cs~
