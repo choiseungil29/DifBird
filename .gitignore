@@ -7,8 +7,8 @@
 *.unityproj
 *.sln
 *.suo
-*.userprefs
 *.pidb
+*.userprefs
 *.swp
 *.nib
 
