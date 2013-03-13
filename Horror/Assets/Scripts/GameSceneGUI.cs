@@ -3,8 +3,6 @@ using System.Collections;
 
 public class GameSceneGUI : MonoBehaviour {
 
-	public GUIText Object;
-
 	// Use this for initialization
 	void Start () {	
 	}
@@ -23,7 +21,7 @@ public class GameSceneGUI : MonoBehaviour {
 		int paddingY = 6;
 
 		if(GUI.Button(new Rect(Screen.width - width - paddingX, Screen.height - height - paddingY, width, height), Input.mousePosition.ToString())) {
-			print("Hello Unity!");
+			print("Hello Unity!"); // same Debug.Log();
 		}
 	}
 }

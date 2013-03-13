@@ -55,7 +55,7 @@ public class GameCharacter : MonoBehaviour {
         this.transform.rotation = Quaternion.Euler(y, x, 0); // axis of x, y, z rotation value transform
 
         Vector3 characterAng = this.transform.rotation.eulerAngles;
-        camera.transform.RotateAround(CharacterPos, camera.transform.TransformDirection(Vector3.up), characterAng.y); // Z축도 같이 내려간다. 이걸 수정
+        camera.transform.RotateAround(CharacterPos, camera.transform.TransformDirection(Vector3.up), characterAng.y);
         camera.transform.RotateAround(CharacterPos, camera.transform.TransformDirection(Vector3.right), characterAng.x);
     }
 }
