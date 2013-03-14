@@ -21,6 +21,9 @@ Testbed/Library/ScriptAssemblies
 *.suo
 *.pidb
 *.userprefs
+*.pdb
+*.XML
+*.htm
 
 
 .DS_Store
