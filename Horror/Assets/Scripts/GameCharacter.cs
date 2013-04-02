@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class GameCharacter : MonoBehaviour {
+public class GameCharacter : Photon.MonoBehaviour {
 	
     public Camera camera;
 
@@ -13,6 +13,8 @@ public class GameCharacter : MonoBehaviour {
 
     private float x = 0.0f;
     private float y = 0.0f;
+	
+	public bool isControl = false;
 
 	// Use this for initialization
 	void Start () 
@@ -24,10 +26,18 @@ public class GameCharacter : MonoBehaviour {
         if (this.rigidbody)
             this.rigidbody.freezeRotation = true;
 	}
+	public void Set_isControl(bool x)
+    {
+        isControl = x;
+    }
 
     // Update is called once per frame
     void Update()
     {
+		Debug.Log("Character Update1");
+		if (isControl != true) return;
+		
+		Debug.Log("Character Update2");
         Movement();
         Rotation();
 	}
