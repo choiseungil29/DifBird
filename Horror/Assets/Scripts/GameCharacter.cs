@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class GameCharacter : MonoBehaviour {
-	
+	   
     public Camera camera;
 
 	private int speed = 10;
@@ -24,6 +24,10 @@ public class GameCharacter : MonoBehaviour {
         if (this.rigidbody)
             this.rigidbody.freezeRotation = true;
 	}
+
+    void FixedUpdate()
+    {
+    }
 
     // Update is called once per frame
     void Update()

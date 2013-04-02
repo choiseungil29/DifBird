@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour {
 
     private Seeker seeker;
     private CharacterController controller;
+    private GridGraph graph;
 
     public Path path;
     public float speed = 10000.0f;
@@ -21,8 +22,7 @@ public class Enemy : MonoBehaviour {
         seeker = this.GetComponent<Seeker>();
         controller = this.GetComponent<CharacterController>();
         AstarPath astar = this.GetComponent<AstarPath>();
-        Debug.Log(astar.GetType());
-        Debug.Log(astar.graphs[0].matrix);
+        graph = AstarPath.active.astarData.gridGraph;
 
         seeker.StartPath(this.transform.position, target.transform.position, this.OnPathComplete);
 	}
@@ -37,11 +37,7 @@ public class Enemy : MonoBehaviour {
         else
         {
             Debug.Log("Success!");
-            Debug.Log(p.vectorPath[0]);
-            foreach(Vector3 vecList in p.vectorPath)
-            {
-                Debug.Log(vecList);
-            }
+            Debug.Log(p.vectorPath.Count);
 
             seeker.StartPath(this.transform.position, target.transform.position, this.OnPathComplete);
 
@@ -54,6 +50,7 @@ public class Enemy : MonoBehaviour {
         if (path == null)
         {
             Debug.Log("FixedUpdate -> path == null");
+            return;
         }
 
         if (currentWaypoint >= path.vectorPath.Count)
@@ -62,8 +59,9 @@ public class Enemy : MonoBehaviour {
             return;
         }
 
+        graph.center = target.transform.position;
         Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
-        dir *= speed * Time.fixedDeltaTime;
+        dir = dir * speed * Time.fixedDeltaTime;
         controller.SimpleMove(dir);
 
         if (Vector3.Distance(this.transform.position, path.vectorPath[currentWaypoint]) < nextWaypointDistance)
