@@ -1,78 +1,30 @@
 using UnityEngine;
-using Pathfinding;
 using System.Collections;
 
 public class Enemy : MonoBehaviour {
-
-    public GameObject target;
-
-    private Seeker seeker;
-    private CharacterController controller;
-    private GridGraph graph;
-
-    public Path path;
-    public float speed = 10000.0f;
-    public float nextWaypointDistance = 3.0f;
-
-    private int currentWaypoint = 0;
-    
+	
+	public GameObject target;
+	
+	private NavMeshAgent agent;
+	
 	// Use this for initialization
-	void Start () 
-    {
-        seeker = this.GetComponent<Seeker>();
-        controller = this.GetComponent<CharacterController>();
-        AstarPath astar = this.GetComponent<AstarPath>();
-        graph = AstarPath.active.astarData.gridGraph;
-
-        seeker.StartPath(this.transform.position, target.transform.position, this.OnPathComplete);
+	void Start () {
+		agent = gameObject.GetComponent<NavMeshAgent>();
+		agent.destination = target.transform.position;
 	}
-
-    private void OnPathComplete(Pathfinding.Path p)
-    {
-        if (p.error)
-        {
-            Debug.Log("Error!");
-            Debug.Log(p.errorLog);
-        }
-        else
-        {
-            Debug.Log("Success!");
-            Debug.Log(p.vectorPath.Count);
-
-            seeker.StartPath(this.transform.position, target.transform.position, this.OnPathComplete);
-
-            path = p;
-        }
-    }
-
-    public void FixedUpdate()
-    {
-        if (path == null)
-        {
-            Debug.Log("FixedUpdate -> path == null");
-            return;
-        }
-
-        if (currentWaypoint >= path.vectorPath.Count)
-        {
-            Debug.Log("End Of Path Reached");
-            return;
-        }
-
-        graph.center = target.transform.position;
-        Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
-        dir = dir * speed * Time.fixedDeltaTime;
-        controller.SimpleMove(dir);
-
-        if (Vector3.Distance(this.transform.position, path.vectorPath[currentWaypoint]) < nextWaypointDistance)
-        {
-            currentWaypoint++;
-            return;
-        }
-    }
 	
 	// Update is called once per frame
-	void Update ()
-    {
+	void Update () {
+		
+		Vector2 targetPos = new Vector2(target.transform.position.x, target.transform.position.z);
+		Vector2 thisPos = new Vector2(this.transform.position.x, this.transform.position.z);
+		if(Vector2.Distance(targetPos, thisPos) > 15.0f) // Stop Enemy AI
+		{
+			agent.Stop();
+			return;
+		}
+		
+		agent.Resume();
+		agent.destination = target.transform.position;
 	}
 }
