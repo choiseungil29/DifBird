@@ -8,7 +8,6 @@ public class Timer : MonoBehaviour {
     private float incount = 0;
     private timer_func var;
     private bool isSet = false;
-    private bool isWorked = false;
 
     public delegate void timer_func();
 
@@ -24,15 +23,10 @@ public class Timer : MonoBehaviour {
         if (isSet == false)
             return;
 
-        if (isWorked == true)
-            return;
-
         if (count <= 0)
         {
-            isWorked = true;
-            Debug.Log("Before var");
             var();
-            Debug.Log("After var");
+            Destroy(this);
         }
         else if (count > 0)
         {
@@ -51,7 +45,5 @@ public class Timer : MonoBehaviour {
         var = param;
         count = (float)param_count;
         isSet = true;
-
-        Debug.Log("SetTimer Success");
     }
 }

@@ -30,8 +30,6 @@ public class MainSceneGUI : MonoBehaviour {
 
     void LoadLevel()
     {
-        Debug.Log("Before LoadLevel");
         Application.LoadLevel("GameScene");
-        Debug.Log("After LoadLevel");
     }
 }
