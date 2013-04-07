@@ -3,8 +3,11 @@ using System.Collections;
 
 public class GameSceneGUI : MonoBehaviour {
 
+    public GameObject gameCharacter;
+
 	// Use this for initialization
 	void Start () {	
+
 	}
 	
 	// Update is called once per frame

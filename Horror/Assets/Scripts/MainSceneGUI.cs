@@ -23,7 +23,15 @@ public class MainSceneGUI : MonoBehaviour {
 
 		if(GUI.Button(new Rect(Screen.width - width - paddingX, Screen.height - height - paddingY, width, height), "GameStart!")) {
 			print("Button Click!");
-			Application.LoadLevel("GameScene");	
+            Timer timer = gameObject.AddComponent<Timer>();
+            timer.SetTimer(this.LoadLevel, 3000);
 		}
 	}
+
+    void LoadLevel()
+    {
+        Debug.Log("Before LoadLevel");
+        Application.LoadLevel("GameScene");
+        Debug.Log("After LoadLevel");
+    }
 }
