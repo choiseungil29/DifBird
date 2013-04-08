@@ -53,4 +53,10 @@ public class Timer : MonoBehaviour {
         this.isSet = true;
         this.isLoop = loop;
     }
+
+    // Timer Destroy function
+    public void StopTimer()
+    {
+        Destroy(this);
+    }
 }
