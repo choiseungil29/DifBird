@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour {
 		
 		Vector2 targetPos = new Vector2(target.transform.position.x, target.transform.position.z);
 		Vector2 thisPos = new Vector2(this.transform.position.x, this.transform.position.z);
-		if(Vector2.Distance(targetPos, thisPos) > 15.0f) // Stop Enemy AI
+		if(Vector2.Distance(targetPos, thisPos) > 50.0f) // Stop Enemy AI
 		{
 			agent.Stop();
 			return;
