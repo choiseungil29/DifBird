@@ -4,13 +4,15 @@ using System.Collections;
 public class Enemy : MonoBehaviour {
 	
 	public GameObject target;
-	
-	private NavMeshAgent agent;
+
+    private NavMeshAgent agent;
 	
 	// Use this for initialization
 	void Start () {
 		agent = gameObject.GetComponent<NavMeshAgent>();
-		agent.destination = target.transform.position;
+        agent.destination = target.transform.position;
+        animation["Take 001"].wrapMode = WrapMode.Loop;
+        animation.Play();
 	}
 	
 	// Update is called once per frame
@@ -23,8 +25,8 @@ public class Enemy : MonoBehaviour {
 			agent.Stop();
 			return;
 		}
-		
-		agent.Resume();
+
 		agent.destination = target.transform.position;
+        agent.Resume();
 	}
 }
