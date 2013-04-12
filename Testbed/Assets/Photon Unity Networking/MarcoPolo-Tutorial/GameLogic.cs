@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class GameLogic : Photon.MonoBehaviour
+public class GameLogic : MonoBehaviour
 {
 
     public static int playerWhoIsIt = 0;

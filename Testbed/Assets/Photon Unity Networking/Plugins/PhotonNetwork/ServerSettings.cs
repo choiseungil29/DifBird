@@ -8,7 +8,7 @@ using UnityEngine;
 [System.Serializable]
 public class ServerSettings : ScriptableObject
 {
-    public static string DefaultCloudServerUrl = "app.exitgamescloud.com";
+    public static string DefaultCloudServerUrl = "app-eu.exitgamescloud.com";
     
     // per region name and server-prefix
     public static string[] CloudServerRegionNames = new string[] { "EU", "US", "Asia", "Japan" };
@@ -17,14 +17,15 @@ public class ServerSettings : ScriptableObject
     public static string DefaultServerAddress = "127.0.0.1";
     public static int DefaultMasterPort = 5055;  // default port for master server
     public static string DefaultAppID = "Master";
-      
+
     public enum HostingOption { NotSet, PhotonCloud, SelfHosted, OfflineMode }
 
     public HostingOption HostType = HostingOption.NotSet;
     public string ServerAddress = DefaultServerAddress;
     public int ServerPort = 5055;
     public string AppID = "";
-
+    public List<string> RpcList;
+        
     [HideInInspector]
     public bool DisableAutoOpenWizard;
 
