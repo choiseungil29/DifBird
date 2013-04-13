@@ -27,4 +27,8 @@ public class Enemy : MonoBehaviour {
 		agent.destination = target.transform.position;
         agent.Resume();
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+    }
 }
