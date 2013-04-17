@@ -13,6 +13,13 @@ public class GameCharacter : MonoBehaviour {
 
     private float x = 0.0f;
     private float y = 0.0f;
+	
+	public bool isControl = false;
+	
+	public void Set_isControl(bool x)
+    {
+        isControl = x;
+    }
 
 	// Use this for initialization
 	void Start () 
@@ -32,6 +39,7 @@ public class GameCharacter : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+		if(isControl == false) return;
         Movement();
         Rotation();
 	}
