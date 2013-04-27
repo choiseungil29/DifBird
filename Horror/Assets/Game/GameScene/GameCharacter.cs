@@ -34,14 +34,14 @@ public class GameCharacter : MonoBehaviour {
 
     void FixedUpdate()
     {
-        Movement();
-        Rotation();
+        //Movement();
+        //Rotation();
     }
 
     // Update is called once per frame
     void Update()
     {
-		if(isControl == false) return;
+		//if(isControl == false) return;
         Movement();
         Rotation();
 	}
