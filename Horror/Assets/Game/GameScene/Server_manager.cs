@@ -6,6 +6,8 @@ public class Server_manager : Photon.MonoBehaviour {
     private Vector2 scrollPos = Vector2.zero;
     private string roomName = "";
     private string playerName = "";
+	public Camera cam = null;
+	private bool startcheck = false;
     // Use this for initialization
 	
 	private GameObject player;
@@ -36,6 +38,8 @@ public class Server_manager : Photon.MonoBehaviour {
         }
         else if(PhotonNetwork.connectionStateDetailed.ToString() == "JoinedLobby")
         {
+			startcheck=false;
+			cam.enabled = true;
             if (GUILayout.Button("Disconnect"))
             {
                 PhotonNetwork.Disconnect();
@@ -55,7 +59,7 @@ public class Server_manager : Photon.MonoBehaviour {
 			if (GUILayout.Button("Join Room"))
             {
                 PhotonNetwork.JoinRoom(roomName);
-				Debug.Log("Join Room");
+				Debug.Log("Join Room");	
             }
 			if (GUILayout.Button("Join Random Room"))
             {
@@ -70,7 +74,7 @@ public class Server_manager : Photon.MonoBehaviour {
 	        }
 			else
 			{
-				GUILayout.Label(PhotonNetwork.GetRoomList() + " currently available. Join either:");
+				GUILayout.Label(PhotonNetwork.GetRoomList() + " currntly available. Join either:");
 		
 		        this.scrollPos = GUILayout.BeginScrollView(this.scrollPos);
 		        foreach (RoomInfo roomInfo in PhotonNetwork.GetRoomList())
@@ -86,12 +90,15 @@ public class Server_manager : Photon.MonoBehaviour {
 		        }
 		        GUILayout.EndScrollView();
 			}
+			
+			
         }
 		else if(PhotonNetwork.connectionStateDetailed.ToString() == "Joined")
         {
 			if (GUILayout.Button("Left Room"))
             {
-                PhotonNetwork.LeaveRoom();
+				cam.enabled = true;
+				PhotonNetwork.LeaveRoom();
 				Debug.Log ("Leave Room");
             }
 			int i=0;
@@ -110,11 +117,45 @@ public class Server_manager : Photon.MonoBehaviour {
 			}
 			if (i == 2)
 			{
-				if(GUILayout.Button ("Game Start"))
+				if(startcheck == false)
 				{
-					string name = (PhotonNetwork.isMasterClient == true) ? "Player_1" : "Player_2";
-					player = PhotonNetwork.Instantiate( name, new Vector3(31f,7f,62f), Quaternion.identity, 0 );
+					if(GetComponent<Room_server>().Rready == true && GetComponent<Room_server>().ready == true)
+					{
+						if(GUILayout.Button ("Start"))
+						{
+							startcheck = true;
+							cam.enabled = false;
+							string name = (PhotonNetwork.isMasterClient == true) ? "Player_1" : "Player_2";
+							//Scene Object
+							player = PhotonNetwork.Instantiate( name, new Vector3(31f,7f,62f), Quaternion.identity, 0, null);
+						}
+					}
+					else if(GUILayout.Button ("Ready"))
+					{
+						if(PhotonNetwork.isMasterClient == true)
+						{
+							if(GetComponent<Room_server>().Rready == false)
+								GetComponent<Room_server>().Rready = true;
+							else 
+								GetComponent<Room_server>().Rready = false;
+						}
+						else
+						{
+							if(GetComponent<Room_server>().ready == false)
+								GetComponent<Room_server>().ready = true;
+							else 
+								GetComponent<Room_server>().ready = false;
+						}
+						
+						Debug.Log ("ready : "+ GetComponent<Room_server>().ready);
+						Debug.Log ("Rready : "+ GetComponent<Room_server>().Rready);
+						
+						
+					}
+					
 				}
+				else
+					cam.enabled = false;
 			}
 		}
 
@@ -150,5 +191,9 @@ public class Server_manager : Photon.MonoBehaviour {
 	void OnReceivedRoomListUpdate()
 	{
 		Debug.Log ("OnReceivedRoomListUpdate");
+	}
+	void OnPhotonPlayerDisconnected(PhotonPlayer otherPlayer)
+	{
+		Debug.Log ("OnPhotonPlayerDisconnected");
 	}
 }

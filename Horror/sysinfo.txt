@@ -1,0 +1,177 @@
+System:
+  OS: Windows 8  (6.2.9200) 64bit
+  CPU: Intel(R) Core(TM) i7-2670QM CPU @ 2.20GHz, count: 8
+  Physical RAM: 4044 MB
+  Addressable RAM: 2048 MB
+
+D3D9:
+  Renderer: Intel(R) HD Graphics 3000
+  VendorID: 8086
+  Driver: aticfx32.dll 8.17.10.1151
+  VRAM: 2030 (via DXGI)
+
+OpenGL:
+  Version: 3.1.0 - Build 9.17.10.2817
+  Vendor: Intel
+  Renderer: Intel(R) HD Graphics 3000
+  VRAM: 2030 (via DXGI)
+  Extensions: GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_blend_color GL_EXT_abgr GL_EXT_texture3D GL_EXT_clip_volume_hint GL_EXT_compiled_vertex_array GL_SGIS_texture_edge_clamp GL_SGIS_generate_mipmap GL_EXT_draw_range_elements GL_SGIS_texture_lod GL_EXT_rescale_normal GL_EXT_packed_pixels GL_EXT_texture_edge_clamp GL_EXT_separate_specular_color GL_ARB_multitexture GL_EXT_texture_env_combine GL_EXT_bgra GL_EXT_blend_func_separate GL_EXT_secondary_color GL_EXT_fog_coord GL_EXT_texture_env_add GL_ARB_texture_cube_map GL_ARB_transpose_matrix GL_ARB_texture_env_add GL_IBM_texture_mirrored_repeat GL_EXT_multi_draw_arrays GL_NV_blend_square GL_ARB_texture_compression GL_3DFX_texture_compression_FXT1 GL_EXT_texture_filter_anisotropic GL_ARB_texture_border_clamp GL_ARB_point_parameters GL_ARB_texture_env_combine GL_ARB_texture_env_dot3 GL_ARB_texture_env_crossbar GL_EXT_texture_compression_s3tc GL_ARB_shadow GL_ARB_window_pos GL_EXT_shadow_funcs GL_EXT_stencil_wrap GL_ARB_vertex_program GL_EXT_texture_rectangle GL_ARB_fragment_program GL_EXT_stencil_two_side GL_ATI_separate_stencil GL_ARB_vertex_buffer_object GL_EXT_texture_lod_bias GL_ARB_occlusion_query GL_ARB_fragment_shader GL_ARB_shader_objects GL_ARB_shading_language_100 GL_ARB_texture_non_power_of_two GL_ARB_vertex_shader GL_NV_texgen_reflection GL_ARB_point_sprite GL_ARB_fragment_program_shadow GL_EXT_blend_equation_separate GL_ARB_depth_texture GL_ARB_texture_rectangle GL_ARB_draw_buffers GL_ARB_color_buffer_float GL_ARB_half_float_pixel GL_ARB_texture_float GL_ARB_pixel_buffer_object GL_EXT_framebuffer_object GL_ARB_draw_instanced GL_ARB_half_float_vertex GL_ARB_occlusion_query2 GL_EXT_draw_buffers2 GL_WIN_swap_hint GL_EXT_texture_sRGB GL_ARB_multisample GL_EXT_packed_float GL_EXT_texture_shared_exponent GL_ARB_texture_rg GL_ARB_texture_compression_rgtc GL_NV_conditional_render GL_EXT_texture_swizzle GL_ARB_sync GL_ARB_framebuffer_sRGB GL_EXT_packed_depth_stencil GL_ARB_depth_buffer_float GL_EXT_transform_feedback GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_ARB_framebuffer_object GL_EXT_texture_array GL_EXT_texture_integer GL_ARB_map_buffer_range GL_EXT_texture_snorm GL_INTEL_performance_queries GL_ARB_copy_buffer GL_ARB_sampler_objects GL_NV_primitive_restart GL_ARB_seamless_cube_map GL_ARB_uniform_buffer_object GL_ARB_depth_clamp GL_ARB_vertex_array_bgra GL_ARB_shader_bit_encoding GL_ARB_draw_buffers_blend GL_ARB_texture_query_lod GL_ARB_explicit_attrib_location GL_ARB_draw_elements_base_vertex GL_ARB_instanced_arrays GL_ARB_fragment_coord_conventions GL_EXT_gpu_program_parameters GL_ARB_texture_buffer_object_rgb32 GL_ARB_compatibility GL_ARB_texture_rgb10_a2ui GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_timer_query GL_INTEL_map_texture GL_ARB_vertex_array_object GL_ARB_provoking_vertex 
+
+User locale: ko-KR
+System locale: ko-KR
+
+Running processes:
+uTorrent.exe (6292)
+    path: C:\Program Files (x86)\uTorrent\uTorrent.exe
+    company:  BitTorrent Inc.
+    product:  μTorrent
+    filedesc: μTorrent
+    filever:  3.3.0.29544
+    prodver:  3.3.0.29544
+Connectify.exe (6392)
+    path: C:\Program Files (x86)\Connectify\Connectify.exe
+    company:  Connectify
+    product:  Connectify
+    filedesc: Connectify
+    filever:  1.0.4696.26097
+    prodver:  1.0.4696.26097
+NaverAgent.exe (6448)
+    path: C:\Program Files (x86)\Naver\NaverAgent\NaverAgent.exe
+    company:  NHN Corporation
+    product:  NaverAgent
+    filedesc: NaverAgent
+    filever:  1.1.0.49
+    prodver:  1.1.0.49
+ifb_conn.exe (6520)
+    path: C:\Program Files (x86)\i-Funbox DevTeam\ifb_conn.exe
+    company:  
+    product:  
+    filedesc: 
+    filever:  0.0.0.0
+    prodver:  0.0.0.0
+windowstab.exe (6820)
+    path: C:\ProgramData\WindowsTab\windowstab.exe
+    company:  
+    product:  
+    filedesc: 
+    filever:  0.0.0.0
+    prodver:  0.0.0.0
+Dropbox.exe (7076)
+    path: C:\Users\johna\AppData\Roaming\Dropbox\bin\Dropbox.exe
+    company:  Dropbox, Inc.
+    product:  Dropbox
+    filedesc: Dropbox
+    filever:  1.6.18.0
+    prodver:  1.0.0.1
+NToolsUpdater.exe (6836)
+    path: C:\Program Files (x86)\Naver\NaverToolsUpdater\NToolsUpdater.exe
+    company:  NHN Corporation
+    product:  네이버 툴박스
+    filedesc: 네이버 툴박스
+    filever:  1.1.0.173
+    prodver:  1.1.0.173
+jusched.exe (4076)
+    path: C:\Program Files (x86)\Common Files\Java\Java Update\jusched.exe
+    company:  Sun Microsystems, Inc.
+    product:  Java(TM) Platform SE Auto Updater 2 0
+    filedesc: Java(TM) Update Scheduler
+    filever:  2.0.2.1
+    prodver:  2.0.2.1
+iTunesHelper.exe (6936)
+    path: C:\Program Files (x86)\iTunes\iTunesHelper.exe
+    company:  Apple Inc.
+    product:  iTunes
+    filedesc: iTunesHelper
+    filever:  11.0.2.26
+    prodver:  11.0.2.26
+IMBooster.exe (2244)
+    path: C:\Program Files (x86)\Iminent\IMBooster\IMBooster.exe
+    company:  Iminent
+    product:  Iminent Booster
+    filedesc: IMBooster
+    filever:  4.10.0.0
+    prodver:  4.10.0.0
+IAStorIcon.exe (8176)
+    path: C:\Program Files (x86)\Intel\Intel(R) Rapid Storage Technology\IAStorIcon.exe
+    company:  Intel Corporation
+    product:  IAStorIcon
+    filedesc: IAStorIcon
+    filever:  11.5.4.1001
+    prodver:  11.5.4.1001
+KakaoTalk.exe (5244)
+    path: C:\Users\johna\AppData\Local\Kakao\KakaoTalk\Application\KakaoTalk.exe
+    company:  Kakao Inc.
+    product:  KakaoTalk
+    filedesc: KakaoTalk
+    filever:  0.9.4.207
+    prodver:  0.9.4.207
+chrome.exe (1804)
+    path: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+    company:  Google Inc.
+    product:  Google Chrome
+    filedesc: Google Chrome
+    filever:  26.0.1410.64
+    prodver:  26.0.1410.64
+chrome.exe (4984)
+    path: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+    company:  Google Inc.
+    product:  Google Chrome
+    filedesc: Google Chrome
+    filever:  26.0.1410.64
+    prodver:  26.0.1410.64
+chrome.exe (5648)
+    path: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+    company:  Google Inc.
+    product:  Google Chrome
+    filedesc: Google Chrome
+    filever:  26.0.1410.64
+    prodver:  26.0.1410.64
+chrome.exe (7920)
+    path: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+    company:  Google Inc.
+    product:  Google Chrome
+    filedesc: Google Chrome
+    filever:  26.0.1410.64
+    prodver:  26.0.1410.64
+chrome.exe (6156)
+    path: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+    company:  Google Inc.
+    product:  Google Chrome
+    filedesc: Google Chrome
+    filever:  26.0.1410.64
+    prodver:  26.0.1410.64
+WDExpress.exe (5048)
+    path: C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\WDExpress.exe
+    company:  Microsoft Corporation
+    product:  Microsoft® Visual Studio® 2012
+    filedesc: Microsoft Visual Studio Express 2012 for Windows Desktop
+    filever:  11.0.50727.42
+    prodver:  11.0.50727.42
+virtualdj_pro.exe (7724)
+    path: C:\Program Files (x86)\VirtualDJ\virtualdj_pro.exe
+    company:  Atomix Productions
+    product:  VirtualDJ
+    filedesc: VirtualDJ
+    filever:  7.0.0.0
+    prodver:  7.0.0.0
+chrome.exe (232)
+    path: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+    company:  Google Inc.
+    product:  Google Chrome
+    filedesc: Google Chrome
+    filever:  26.0.1410.64
+    prodver:  26.0.1410.64
+SeratoDJ.exe (1176)
+    path: C:\Program Files (x86)\Serato\SeratoDJ\SeratoDJ.exe
+    company:  Serato
+    product:  Serato DJ
+    filedesc: Serato DJ
+    filever:  1.2.0.31
+    prodver:  1.2.0.31
+UnityBugReporter.exe (7404)
+    path: C:\Program Files (x86)\Unity\Editor\UnityBugReporter.exe
+    company:  Unity Technologies ApS
+    product:  Unity Bug Reporter
+    filedesc: Unity Bug Reporter
+    filever:  4.0.1.62181
+    prodver:  4.0.1.62181

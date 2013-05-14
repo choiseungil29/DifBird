@@ -16,10 +16,11 @@ public class User : Photon.MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
+		Debug.Log(PhotonNetwork.GetPing());
 		if (photonView.isMine == true) return;
 		
         float distance = Vector3.Distance(transform.position, this.correctPlayerPos);
-        if (distance > 0.1f)
+        if (distance > 0.01f)
         {
             Vector3.Lerp(transform.position, this.correctPlayerPos, Time.deltaTime * 5);
             Quaternion.Lerp(transform.rotation, this.correctPlayerRot, Time.deltaTime * 5);
