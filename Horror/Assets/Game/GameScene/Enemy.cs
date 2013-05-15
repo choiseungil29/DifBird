@@ -21,9 +21,11 @@ public class Enemy : MonoBehaviour {
 
     void Awake()
     {
-        SqliteConnection connection = new SqliteConnection("URI=file:" + "Test.db");
+        Debug.Log("ASd");
+        SqliteConnection connection = new SqliteConnection(string.Format("Data Source={0}", "Test.db"));
         connection.Open();
         Debug.Log("Connected DB");
+        Debug.Log(connection.ConnectionString);
 
         SqliteCommand sqlCmd = new SqliteCommand(connection);
         sqlCmd.CommandText = "SELECT * FROM Position";
@@ -35,7 +37,7 @@ public class Enemy : MonoBehaviour {
         posList = new List<Vector3>();
         while (reader.Read())
         {
-            Debug.Log("(" + reader.GetFloat(0) + ", " + reader.GetFloat(1) + ", " + reader.GetFloat(2) + ")");
+            //Debug.Log("(" + reader.GetFloat(0) + ", " + reader.GetFloat(1) + ", " + reader.GetFloat(2) + ")");
             posList.Add(new Vector3(reader.GetFloat(0), reader.GetFloat(1), reader.GetFloat(2)));
         }
 
@@ -47,28 +49,28 @@ public class Enemy : MonoBehaviour {
 
         // reading database code
 
-        connection.ConnectionString = "URI=file:" + "EventDB.db";
-        connection.Open();
+        //connection.ConnectionString = "URI=file:" + "EventDB.db";
+        //connection.Open();
 
-        SqliteCommand sqlCmd2 = new SqliteCommand(connection);
-        sqlCmd2.CommandText = "SELECT * FROM Event";
-        SqliteDataReader reader2 = sqlCmd2.ExecuteReader();
+        //SqliteCommand sqlCmd2 = new SqliteCommand(connection);
+        //sqlCmd2.CommandText = "SELECT * FROM Event";
+        //SqliteDataReader reader2 = sqlCmd2.ExecuteReader();
 
-        string eventName = "";
-        while (reader2.Read())
-        {
-            eventName = reader2.GetString(0);
-            Contents content = new Contents(reader2.GetString(1), reader2.GetString(2));
-            Debug.Log("Event Name : " + eventName);
-            Debug.Log("Character Name : " + content.charName);
-            Debug.Log("Description : " + content.description);
-            contentsList.Add(content);
-        }
+        //string eventName = "";
+        //while (reader2.Read())
+        //{
+        //    eventName = reader2.GetString(0);
+        //    Contents content = new Contents(reader2.GetString(1), reader2.GetString(2));
+        //    //Debug.Log("Event Name : " + eventName);
+        //    //Debug.Log("Character Name : " + content.charName);
+        //    //Debug.Log("Description : " + content.description);
+        //    contentsList.Add(content);
+        //}
 
-        eventMap.Add(eventName, contentsList);
+        //eventMap.Add(eventName, contentsList);
 
-        reader2.Close();
-        connection.Close();
+        //reader2.Close();
+        //connection.Close();
 
         text = this.GetComponent<GUIText>();
     }
@@ -95,6 +97,8 @@ public class Enemy : MonoBehaviour {
         if (spacebarDown)
         {
         }
+
+        Debug.Log(Application.dataPath);
 	}
 
     void FixedUpdate()

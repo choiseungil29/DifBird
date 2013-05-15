@@ -64,7 +64,7 @@ public class GameCharacter : MonoBehaviour {
         x += Input.GetAxis("Mouse X") * xSpeed * 0.008f;
         y -= Input.GetAxis("Mouse Y") * ySpeed * 0.008f; // 0.02f -> Mouse Sensibility
 
-        y = Mathf.Clamp(y, -5.0f, 40.0f);
+        y = Mathf.Clamp(y, -80.0f, 80.0f);
 
         this.transform.rotation = Quaternion.Euler(y, x, 0); // axis of x, y, z rotation value transform
 
