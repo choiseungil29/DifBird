@@ -8,7 +8,7 @@ using UnityEngine;
 [System.Serializable]
 public class ServerSettings : ScriptableObject
 {
-    public static string DefaultCloudServerUrl = "app-eu.exitgamescloud.com";
+    public static string DefaultCloudServerUrl = "app.exitgamescloud.com";
     
     // per region name and server-prefix
     public static string[] CloudServerRegionNames = new string[] { "EU", "US", "Asia", "Japan" };
