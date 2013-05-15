@@ -6,8 +6,9 @@ public class GameSceneGUI : MonoBehaviour {
     public GameObject gameCharacter;
 
 	// Use this for initialization
-	void Start () {	
-
+	void Start () {
+        //Screen.showCursor = false;
+        Debug.Log("In GameSceneGUI");
 	}
 	
 	// Update is called once per frame
@@ -24,7 +25,7 @@ public class GameSceneGUI : MonoBehaviour {
 		int paddingY = 6;
 
 		if(GUI.Button(new Rect(Screen.width - width - paddingX, Screen.height - height - paddingY, width, height), Input.mousePosition.ToString())) {
-			print("Hello Unity!"); // same Debug.Log();
+            Debug.Log("Hello Unity!");
 		}
 	}
 }
