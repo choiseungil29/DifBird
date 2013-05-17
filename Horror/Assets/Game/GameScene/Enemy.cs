@@ -33,11 +33,14 @@ public class Enemy : MonoBehaviour {
 
         string[] readArray = new string[reader.RecordsAffected];
         Debug.Log(reader.RecordsAffected);
+        Debug.Log(reader.FieldCount);
+        Debug.Log(reader.HasRows);
+        Debug.Log(reader.VisibleFieldCount);
 
         posList = new List<Vector3>();
         while (reader.Read())
         {
-            //Debug.Log("(" + reader.GetFloat(0) + ", " + reader.GetFloat(1) + ", " + reader.GetFloat(2) + ")");
+            Debug.Log("(" + reader.GetFloat(0) + ", " + reader.GetFloat(1) + ", " + reader.GetFloat(2) + ")");
             posList.Add(new Vector3(reader.GetFloat(0), reader.GetFloat(1), reader.GetFloat(2)));
         }
 

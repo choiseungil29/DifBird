@@ -35,7 +35,6 @@ public class GameCharacter_1 : MonoBehaviour {
 
     void FixedUpdate()
     {
-<<<<<<< HEAD:Horror/Assets/Game/GameScene/GameCharacter.cs
         //Movement();
         //Rotation();
     }
@@ -43,11 +42,6 @@ public class GameCharacter_1 : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-		//if(isControl == false) return;
-        Movement();
-        Rotation();
-	}
-=======
 		if(PhotonNetwork.isMasterClient == true)
 		{
 			camera.enabled = true;
@@ -58,9 +52,6 @@ public class GameCharacter_1 : MonoBehaviour {
         Movement();
         Rotation();
     }
-
-    // Update is called once per frame
->>>>>>> b2641c3689950e84b26f542fd82593fb6ea712a2:Horror/Assets/Game/GameScene/GameCharacter_1.cs
 
     void Movement()
     {

@@ -45,6 +45,7 @@ Testbed/Assets/Photon Unity Networking
 
 
 .DS_Store
+*.fbx
 
 
 # Garbage code

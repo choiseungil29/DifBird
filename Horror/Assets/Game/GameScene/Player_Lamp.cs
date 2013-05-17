@@ -10,6 +10,7 @@ public class Player_Lamp : MonoBehaviour
 	void Start ()
     {
 	}
+
 	void FixedUpdate ()
     {
         if (Input.GetMouseButtonDown(1) == true && mouse_flag == false)
@@ -22,6 +23,7 @@ public class Player_Lamp : MonoBehaviour
             mouse_flag = false;
         }
 	}
+
     void Switch()
     {
         if (light_flag == true)
