@@ -1,10 +1,13 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using Mono.Data.Sqlite;
 
 public class GameCharacter : MonoBehaviour
 {
 
     public Camera camera = null;
+    public Texture2D cursorTexture;
 
     private int speed = 10;
     private int cameraDistance = -1;
@@ -14,6 +17,8 @@ public class GameCharacter : MonoBehaviour
 
     private float x = 0.0f;
     private float y = 0.0f;
+
+    private List<Vector3> startingList;
 
     public bool isControl = false;
 
@@ -26,6 +31,8 @@ public class GameCharacter : MonoBehaviour
 
         if (this.rigidbody)
             this.rigidbody.freezeRotation = true;
+
+        Starting();
     }
 
     void FixedUpdate()
@@ -68,5 +75,33 @@ public class GameCharacter : MonoBehaviour
         camera.transform.Rotate(Vector3.up * 180.0f);
         camera.transform.RotateAround(CharacterPos, camera.transform.TransformDirection(Vector3.right), characterAng.x);
         //camera.transform.Rotate(Vector3.right * 180.0f);
+    }
+
+    void OnGUI()
+    {
+    }
+
+    private void Starting()
+    {
+        SqliteConnection connection = new SqliteConnection(string.Format("Data Source={0}", "Starting.db"));
+        connection.Open();
+
+        SqliteCommand sqlCmd = new SqliteCommand(connection);
+        sqlCmd.CommandText = "SELECT * FROM Position";
+        SqliteDataReader reader = sqlCmd.ExecuteReader();
+
+        startingList = new List<Vector3>();
+        while (reader.Read())
+        {
+            startingList.Add(new Vector3(reader.GetFloat(0), reader.GetFloat(1), reader.GetFloat(2)));
+        }
+        reader.Close();
+        connection.Close();
+
+        int i = Random.Range(0, 5);
+        this.transform.position = startingList[i];
+        Debug.Log(this.transform.position);
+        Debug.Log(i);
+        Debug.Log("Success!");
     }
 }

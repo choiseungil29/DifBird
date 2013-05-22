@@ -11,8 +11,6 @@ public class Enemy : MonoBehaviour {
     private List<Vector3> posList;
     private int dest_idx;
 
-    private Dictionary<string, List<Contents>> eventMap; // EventName, 0 : CharacterName, 1 : Discription
-
     private GUIText text;
 
     private int flag = 0;
@@ -21,34 +19,32 @@ public class Enemy : MonoBehaviour {
 
     void Awake()
     {
+
         Debug.Log("ASd");
         SqliteConnection connection = new SqliteConnection(string.Format("Data Source={0}", "Test.db"));
         connection.Open();
         Debug.Log("Connected DB");
-        Debug.Log(connection.ConnectionString);
+        //Debug.Log(connection.ConnectionString);
 
         SqliteCommand sqlCmd = new SqliteCommand(connection);
         sqlCmd.CommandText = "SELECT * FROM Position";
         SqliteDataReader reader = sqlCmd.ExecuteReader();
 
         string[] readArray = new string[reader.RecordsAffected];
-        Debug.Log(reader.RecordsAffected);
-        Debug.Log(reader.FieldCount);
-        Debug.Log(reader.HasRows);
-        Debug.Log(reader.VisibleFieldCount);
+        //Debug.Log(reader.RecordsAffected);
+        //Debug.Log(reader.FieldCount);
+        //Debug.Log(reader.HasRows);
+        //Debug.Log(reader.VisibleFieldCount);
 
         posList = new List<Vector3>();
         while (reader.Read())
         {
-            Debug.Log("(" + reader.GetFloat(0) + ", " + reader.GetFloat(1) + ", " + reader.GetFloat(2) + ")");
+            //Debug.Log("(" + reader.GetFloat(0) + ", " + reader.GetFloat(1) + ", " + reader.GetFloat(2) + ")");
             posList.Add(new Vector3(reader.GetFloat(0), reader.GetFloat(1), reader.GetFloat(2)));
         }
 
         reader.Close();
         connection.Close();
-
-        eventMap = new Dictionary<string, List<Contents>>();
-        List<Contents> contentsList = new List<Contents>();
 
         // reading database code
 
@@ -101,19 +97,12 @@ public class Enemy : MonoBehaviour {
         {
         }
 
-        Debug.Log(Application.dataPath);
+        Debug.Log(agent.destination);
 	}
 
     void FixedUpdate()
     {
-        if (!discoverCharacter)
-        {
-            AI(); // AI Code
-        }
-        else
-        {
-            return; // relative navigation agent code.
-        }
+        AI(); // AI Code
     }
 
     private void OnDrawGizmos()
@@ -122,17 +111,26 @@ public class Enemy : MonoBehaviour {
 
     void AI()
     {
-        if (Vector3.Distance(this.transform.position, posList[dest_idx]) < 10.0f)
+        if (Vector3.Distance(target.transform.position, this.transform.position) < 150.0f)
         {
-            if (dest_idx < posList.Count - 1)
+            agent.SetDestination(target.transform.position);
+        }
+        else
+        {
+            if (Vector3.Distance(this.transform.position, posList[dest_idx]) < 10.0f)
             {
-                agent.SetDestination(posList[++dest_idx]);
+                if (dest_idx < posList.Count - 1)
+                {
+                    agent.SetDestination(posList[++dest_idx]);
+                }
+                else
+                {
+                    dest_idx = 0;
+                    agent.SetDestination(posList[dest_idx]);
+                }
             }
             else
-            {
-                dest_idx = 0;
                 agent.SetDestination(posList[dest_idx]);
-            }
         }
     }
 
