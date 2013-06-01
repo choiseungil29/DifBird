@@ -96,8 +96,6 @@ public class Enemy : MonoBehaviour {
         if (spacebarDown)
         {
         }
-
-        Debug.Log(agent.destination);
 	}
 
     void FixedUpdate()
