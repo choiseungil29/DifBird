@@ -7,9 +7,10 @@ public class GameCharacter : MonoBehaviour
 {
 
     public Camera camera = null;
+    public Camera camera2 = null;
     public Texture2D cursorTexture;
 
-    private int speed = 10;
+    private int speed = 40;
     private int cameraDistance = -1;
 
     private int xSpeed = 250;
@@ -17,6 +18,8 @@ public class GameCharacter : MonoBehaviour
 
     private float x = 0.0f;
     private float y = 0.0f;
+
+    private float gravity = -10;
 
     private List<Vector3> startingList;
 
@@ -32,20 +35,16 @@ public class GameCharacter : MonoBehaviour
         if (this.rigidbody)
             this.rigidbody.freezeRotation = true;
 
-        Starting();
+        //Starting();
     }
 
-    void FixedUpdate()
-    {
-        //Movement();
-        //Rotation();
-    }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Movement();
         Rotation();
+        //this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y - 0.32f, this.transform.position.z);
     }
 
     void Movement()
@@ -54,6 +53,7 @@ public class GameCharacter : MonoBehaviour
         this.transform.Translate(Vector3.left * Input.GetAxis("Left") * Time.fixedDeltaTime * speed);
         this.transform.Translate(Vector3.back * Input.GetAxis("Back") * Time.fixedDeltaTime * speed);
         this.transform.Translate(Vector3.right * Input.GetAxis("Right") * Time.fixedDeltaTime * speed);
+        this.transform.Translate(new Vector3(0, gravity, 0) * Time.fixedDeltaTime);
         // Character Movement
     }
 
@@ -68,7 +68,9 @@ public class GameCharacter : MonoBehaviour
 
         y = Mathf.Clamp(y, -80.0f, 80.0f);
 
-        this.transform.rotation = Quaternion.Euler(y, x, 0); // axis of x, y, z rotation value transform
+        this.transform.rotation = Quaternion.Euler(0, x, 0); // axis of x, y, z rotation value transform
+
+        camera2.transform.rotation = Quaternion.Euler(y, x, 0);
 
         Vector3 characterAng = this.transform.rotation.eulerAngles;
         camera.transform.RotateAround(CharacterPos, camera.transform.TransformDirection(Vector3.up), characterAng.y);
