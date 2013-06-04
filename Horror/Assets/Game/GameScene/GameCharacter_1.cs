@@ -52,7 +52,6 @@ public class GameCharacter_1 : MonoBehaviour {
         Movement();
         Rotation();
     }
-
     void Movement()
     {
         this.transform.Translate(Vector3.forward * Input.GetAxis("Back") * Time.fixedDeltaTime * speed);
