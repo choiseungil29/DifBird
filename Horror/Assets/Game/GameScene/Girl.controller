@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Gitl
+  m_Name: Girl
   m_AnimatorEvents: []
   m_Layers:
   - serializedVersion: 2
@@ -105,22 +105,22 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_LocalTransitions:
     data:
-      first: {fileID: 110295111}
-      second:
-      - {fileID: 110195677}
-    data:
       first: {fileID: 110200000}
       second:
       - {fileID: 110100000}
+    data:
+      first: {fileID: 110295111}
+      second:
+      - {fileID: 110195677}
   m_OrderedTransitions:
     data:
-      first: {fileID: 110295111}
-      second:
-      - {fileID: 110195677}
-    data:
       first: {fileID: 110200000}
       second:
       - {fileID: 110100000}
+    data:
+      first: {fileID: 110295111}
+      second:
+      - {fileID: 110195677}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
