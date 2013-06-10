@@ -33,7 +33,7 @@ public class Player_Lamp : MonoBehaviour
         }
         else
         {
-            StandLight.light.range = 1000;
+            StandLight.light.range = 75;
             light_flag = true;
         }
     }
