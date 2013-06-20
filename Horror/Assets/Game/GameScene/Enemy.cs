@@ -19,27 +19,17 @@ public class Enemy : MonoBehaviour {
 
     void Awake()
     {
-
-        Debug.Log("ASd");
+        List<Vector3> posList;
         SqliteConnection connection = new SqliteConnection(string.Format("Data Source={0}", "Test.db"));
         connection.Open();
-        Debug.Log("Connected DB");
-        //Debug.Log(connection.ConnectionString);
 
         SqliteCommand sqlCmd = new SqliteCommand(connection);
         sqlCmd.CommandText = "SELECT * FROM Position";
         SqliteDataReader reader = sqlCmd.ExecuteReader();
 
-        string[] readArray = new string[reader.RecordsAffected];
-        //Debug.Log(reader.RecordsAffected);
-        //Debug.Log(reader.FieldCount);
-        //Debug.Log(reader.HasRows);
-        //Debug.Log(reader.VisibleFieldCount);
-
         posList = new List<Vector3>();
         while (reader.Read())
         {
-            //Debug.Log("(" + reader.GetFloat(0) + ", " + reader.GetFloat(1) + ", " + reader.GetFloat(2) + ")");
             posList.Add(new Vector3(reader.GetFloat(0), reader.GetFloat(1), reader.GetFloat(2)));
         }
 

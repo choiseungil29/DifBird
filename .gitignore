@@ -42,8 +42,6 @@ Testbed/Assets/Photon Unity Networking
 *.XML
 *.htm
 *.exe
-*.fbx
-*.db
 
 
 .DS_Store
