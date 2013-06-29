@@ -9,7 +9,7 @@ _SimpleGlossPower("_SimpleGlossPower", Range(0,1) ) = 0.012
 _EmissionPower("_EmissionPower", Range(0,1) ) = 0
 _Emission("_Emission", 2D) = "black" {}
 _EmissionColor("_EmissionColor", Color) = (0.2686567,0.2385832,0.2385832,1)
-_RimColor("_RimColor", Color) = (1,1,1,1)
+_RimColor("_RimColor", Color) = (1,0,0,1)
 
 	}
 	
