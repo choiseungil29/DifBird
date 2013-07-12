@@ -46,13 +46,18 @@ public class BeatenOfPlayer : MonoBehaviour
 
                     PlayerHP -= 1;
 
-                    Stalker.gameObject.SendMessage("AnimHit");
-                    //Stalker.GetComponent<HitOfGuard>().AnimHit();
+                    //Stalker.gameObject.SendMessage("AnimHit");
+                    Stalker.GetComponent<HitOfGuard>().AnimHit();
                     // 둘다 된다
+                    // sendMessage는 컴포넌트 내 모든 함수 호출용.
+
+                    GameObject MainCamera = GameObject.Find("/Player/Main Camera");
+                    MainCamera.GetComponent<ShakeOfCamera>().StartCoroutine("Shake");
                 }
             }
             else
             {
+                Stalker.GetComponent<HitOfGuard>().StopAnimHit();
                 lastBeatenTime = beatenTime;
             }
 

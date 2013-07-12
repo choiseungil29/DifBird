@@ -19,9 +19,9 @@ public class AIOfGuard : MonoBehaviour {
 	void Update () 
     {
         if (this.hasObstacle())
-            agent.SetDestination(this.transform.position);
+            agent.SetDestination(this.transform.position); // DB의 경로대로 움직임
         else
-            agent.SetDestination(target.transform.position);
+            agent.SetDestination(target.transform.position); // 경비의 Run기능 추가구현 
 	}
 
     bool hasObstacle()
