@@ -63,6 +63,12 @@ Material:
         first:
           name: _Outline
         second: .00499999989
+          name: _Shininess
+        second: .078125
+      data:
+        first:
+          name: _Parallax
+        second: .0199999996
     m_Colors:
       data:
         first:
