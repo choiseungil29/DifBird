@@ -1,0 +1,296 @@
+fileFormatVersion: 2
+guid: 6257ab5b99f5a45ef92e8e821d1c15e7
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Bip001
+    100002: Bip001 Footsteps
+    100004: Bip001 Head
+    100006: Bip001 HeadNub
+    100008: Bip001 L Calf
+    100010: Bip001 L Clavicle
+    100012: Bip001 L Finger0
+    100014: Bip001 L Finger0Nub
+    100016: Bip001 L Foot
+    100018: Bip001 L Forearm
+    100020: Bip001 L Hand
+    100022: Bip001 L Thigh
+    100024: Bip001 L Toe0
+    100026: Bip001 L Toe01
+    100028: Bip001 L Toe02
+    100030: Bip001 L Toe0Nub
+    100032: Bip001 L UpperArm
+    100034: Bip001 Neck
+    100036: Bip001 Pelvis
+    100038: Bip001 R Calf
+    100040: Bip001 R Clavicle
+    100042: Bip001 R Finger0
+    100044: Bip001 R Finger0Nub
+    100046: Bip001 R Foot
+    100048: Bip001 R Forearm
+    100050: Bip001 R Hand
+    100052: Bip001 R Thigh
+    100054: Bip001 R Toe0
+    100056: Bip001 R Toe01
+    100058: Bip001 R Toe02
+    100060: Bip001 R Toe0Nub
+    100062: Bip001 R UpperArm
+    100064: Bip001 Spine
+    100066: Bip001 Spine1
+    100068: Bip001 Spine2
+    100070: Bip001 Spine3
+    100072: DrawCall24_1
+    100074: DrawCall27_1
+    100076: Group1
+    100078: Group10
+    100080: Group2
+    100082: Group3
+    100084: Group4
+    100086: Group5
+    100088: Group6
+    100090: Group7
+    100092: Group8
+    100094: Group9
+    100096: Hentay_by_maotri1
+    100098: japanese_girl_school1
+    100100: Mesh10
+    100102: Mesh11
+    100104: Mesh12
+    100106: Mesh13
+    100108: Mesh15
+    100110: Mesh16
+    100112: Mesh17
+    100114: Mesh18
+    100116: Mesh19
+    100118: Mesh2
+    100120: Mesh20
+    100122: Mesh20_MeshPart0
+    100124: Mesh20_MeshPart1
+    100126: Mesh26
+    100128: Mesh3
+    100130: Mesh4
+    100132: Mesh5
+    100134: Mesh8
+    100136: Mesh9
+    100138: Model
+    100140: //RootNode
+    400000: Bip001
+    400002: Bip001 Footsteps
+    400004: Bip001 Head
+    400006: Bip001 HeadNub
+    400008: Bip001 L Calf
+    400010: Bip001 L Clavicle
+    400012: Bip001 L Finger0
+    400014: Bip001 L Finger0Nub
+    400016: Bip001 L Foot
+    400018: Bip001 L Forearm
+    400020: Bip001 L Hand
+    400022: Bip001 L Thigh
+    400024: Bip001 L Toe0
+    400026: Bip001 L Toe01
+    400028: Bip001 L Toe02
+    400030: Bip001 L Toe0Nub
+    400032: Bip001 L UpperArm
+    400034: Bip001 Neck
+    400036: Bip001 Pelvis
+    400038: Bip001 R Calf
+    400040: Bip001 R Clavicle
+    400042: Bip001 R Finger0
+    400044: Bip001 R Finger0Nub
+    400046: Bip001 R Foot
+    400048: Bip001 R Forearm
+    400050: Bip001 R Hand
+    400052: Bip001 R Thigh
+    400054: Bip001 R Toe0
+    400056: Bip001 R Toe01
+    400058: Bip001 R Toe02
+    400060: Bip001 R Toe0Nub
+    400062: Bip001 R UpperArm
+    400064: Bip001 Spine
+    400066: Bip001 Spine1
+    400068: Bip001 Spine2
+    400070: Bip001 Spine3
+    400072: DrawCall24_1
+    400074: DrawCall27_1
+    400076: Group1
+    400078: Group10
+    400080: Group2
+    400082: Group3
+    400084: Group4
+    400086: Group5
+    400088: Group6
+    400090: Group7
+    400092: Group8
+    400094: Group9
+    400096: Hentay_by_maotri1
+    400098: japanese_girl_school1
+    400100: Mesh10
+    400102: Mesh11
+    400104: Mesh12
+    400106: Mesh13
+    400108: Mesh15
+    400110: Mesh16
+    400112: Mesh17
+    400114: Mesh18
+    400116: Mesh19
+    400118: Mesh2
+    400120: Mesh20
+    400122: Mesh20_MeshPart0
+    400124: Mesh20_MeshPart1
+    400126: Mesh26
+    400128: Mesh3
+    400130: Mesh4
+    400132: Mesh5
+    400134: Mesh8
+    400136: Mesh9
+    400138: Model
+    400140: //RootNode
+    2300000: Mesh10
+    2300002: Mesh11
+    2300004: Mesh12
+    2300006: Mesh13
+    2300008: Mesh15
+    2300010: Mesh16
+    2300012: Mesh17
+    2300014: Mesh18
+    2300016: Mesh19
+    2300018: Mesh2
+    2300020: Mesh26
+    2300022: Mesh3
+    2300024: Mesh4
+    2300026: Mesh5
+    2300028: Mesh8
+    2300030: Mesh9
+    3300000: Mesh10
+    3300002: Mesh11
+    3300004: Mesh12
+    3300006: Mesh13
+    3300008: Mesh15
+    3300010: Mesh16
+    3300012: Mesh17
+    3300014: Mesh18
+    3300016: Mesh19
+    3300018: Mesh2
+    3300020: Mesh26
+    3300022: Mesh3
+    3300024: Mesh4
+    3300026: Mesh5
+    3300028: Mesh8
+    3300030: Mesh9
+    4300000: Mesh20_MeshPart0
+    4300002: Mesh20_MeshPart1
+    4300004: Mesh16
+    4300006: Mesh8
+    4300008: Mesh9
+    4300010: Mesh19
+    4300012: Mesh18
+    4300014: Mesh15
+    4300016: Mesh26
+    4300018: Mesh17
+    4300020: Mesh10
+    4300022: Mesh13
+    4300024: Mesh5
+    4300026: Mesh4
+    4300028: Mesh2
+    4300030: Mesh3
+    4300032: Mesh11
+    4300034: Mesh12
+    7400000: Girl_Walk
+    7400002: Girl_Run
+    9500000: //RootNode
+    13700000: Mesh20_MeshPart0
+    13700002: Mesh20_MeshPart1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations:
+    - name: Girl_Walk
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      transformMask: []
+    - name: Girl_Run
+      takeName: Take 001
+      firstFrame: 43
+      lastFrame: 73
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      transformMask: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 
