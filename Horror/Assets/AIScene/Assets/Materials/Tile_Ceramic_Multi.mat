@@ -8,6 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Tile_Ceramic_Multi
   m_Shader: {fileID: 7, guid: 0000000000000000e000000000000000, type: 0}
+  m_ShaderKeywords: []
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -15,7 +16,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: d69ae4061b4e4d541b62a4c2bec64bc7, type: 3}
+          m_Texture: {fileID: 2800000, guid: c08eae458042441af8aa028b98fc527e, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats: {}

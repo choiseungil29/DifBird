@@ -7,11 +7,19 @@ public class SuddenEvent : MonoBehaviour {
 	protected bool isLoop;
 	private bool isEnd;
 	
+	protected GameObject player;
+	
+	public bool getBeQualified() {
+		return beQualified;
+	}
+	
 	// Use this for initialization
 	protected virtual void Start () {
 		beQualified = false;
 		isLoop = false;
 		isEnd  = true;
+		
+		player = GameObject.Find("/Player");
 	}
 	
 	// Update is called once per frame

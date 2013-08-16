@@ -6,6 +6,8 @@ public class BlinkLamp : MonoBehaviour {
 	public float termMin = 0.05f;
 	public float termMax = 0.1f;
 	
+	public float delayTime = 0.0f;
+	
 	// Use this for initialization
 	void Start () {
 		
@@ -18,6 +20,8 @@ public class BlinkLamp : MonoBehaviour {
 	}
 	
 	IEnumerator Blink() {
+		
+		yield return new WaitForSeconds(delayTime);
 		
 		int count = 0;
 		int maxCount = 10;

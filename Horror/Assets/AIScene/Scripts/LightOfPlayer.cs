@@ -7,7 +7,7 @@ public class LightOfPlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        light = GameObject.Find("/Player/Spotlight").light;
+        light = GameObject.Find("/Player/Main Camera/Spotlight").light;
 
         StartCoroutine("OnRightMouseDown");
 	}

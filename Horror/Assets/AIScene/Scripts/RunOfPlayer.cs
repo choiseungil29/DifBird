@@ -34,7 +34,7 @@ public class RunOfPlayer : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
             {
-                Debug.Log("Success Run");
+                //Debug.Log("Success Run");
 				
 				
 				
@@ -45,7 +45,7 @@ public class RunOfPlayer : MonoBehaviour {
 				
             } else {
 				//movement.maxForwardSpeed = maxRunForwardSpeed/2;
-				Debug.Log("no");
+				//Debug.Log("no");
 				
 				if(movement.maxForwardSpeed != null) {
 					movement.maxForwardSpeed = maxRunForwardSpeed/2;

@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: FrontColor
-  m_Shader: {fileID: 7, guid: 0000000000000000e000000000000000, type: 0}
+  m_Shader: {fileID: 10512, guid: 0000000000000000e000000000000000, type: 0}
   m_ShaderKeywords: []
   m_SavedProperties:
     serializedVersion: 2
@@ -16,8 +16,8 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 518116a215352486393504d8fb6dda7d, type: 3}
-          m_Scale: {x: .100000001, y: .100000001}
+          m_Texture: {fileID: 0}
+          m_Scale: {x: .0299999993, y: .0299999993}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -35,4 +35,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: .533333361, g: .53725493, b: .513725519, a: 1}

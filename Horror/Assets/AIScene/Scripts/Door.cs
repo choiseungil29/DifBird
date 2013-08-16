@@ -5,7 +5,7 @@ public class Door : MonoBehaviour {
 
     private float smooth = 5.0f;
     private float DoorOpenAngle = 90.0f;
-    private bool open = false;
+    private bool close = true;
 
     private Vector3 defaultRot;
     private Vector3 openRot;
@@ -19,22 +19,19 @@ public class Door : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        Debug.Log(open);
-        if (open)
+        if (close)
         {
             transform.eulerAngles = Vector3.Slerp(transform.eulerAngles, defaultRot, Time.deltaTime * smooth);
-            //Open door
         }
         else
         {
-            //Close door
-            if (transform.eulerAngles.y <= 359) transform.eulerAngles = Vector3.Slerp(transform.eulerAngles, openRot, Time.deltaTime * smooth);
+            if (transform.eulerAngles.y <= 359)
+				transform.eulerAngles = Vector3.Slerp(transform.eulerAngles, openRot, Time.deltaTime * smooth);
             
         }
-
-        if (Input.GetKeyDown("f"))
-        {
-            open = !open;
-        }
+	}
+	
+	public void KnockDoor() {
+		close = !close;
 	}
 }

@@ -20,12 +20,12 @@ public class HitOfGuard : MonoBehaviour {
     {
         if (animator)
         {
-            Debug.Log("Success AnimHit");
+            //Debug.Log("Success AnimHit");
             animator.SetBool("IsApproach", true);
         }
         else
         {
-            Debug.Log("Failed AnimHit");
+            //Debug.Log("Failed AnimHit");
         }
     }
 
@@ -33,12 +33,12 @@ public class HitOfGuard : MonoBehaviour {
     {
         if (animator)
         {
-            Debug.Log("Success StopAnimHit");
+            //Debug.Log("Success StopAnimHit");
             animator.SetBool("IsApproach", false);
         }
         else
         {
-            Debug.Log("Failed StopAnimHit");
+            //Debug.Log("Failed StopAnimHit");
         }
     }
 }

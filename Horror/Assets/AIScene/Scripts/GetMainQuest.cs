@@ -23,7 +23,7 @@ public class GetMainQuest : MonoBehaviour {
 					if(hit.transform.gameObject == target) {
 						// click girl.
 						
-						if(target.GetComponent<Girl_Quest>().getIsChatEnd() == true)
+						if(target.GetComponent<Girl_Quest>().getIsChatBoxOff() == true)
 							target.GetComponent<Girl_Quest>().ExplainQuest();
 						
 					}

@@ -7,7 +7,7 @@ public class MovementOfPlayer : MonoBehaviour {
     private GameObject mainCamera = null;
     private GameObject subCamera = null;
 
-    private int speed = 15;
+    public int speed = 15;
     private int cameraDistance = -1;
 
     private int xSpeed = 250;
@@ -35,12 +35,12 @@ public class MovementOfPlayer : MonoBehaviour {
     void Update()
     {
         Movement();
-        Rotation();
+        //Rotation();
     }
 
     void Movement()
     {
-        this.transform.Translate(Vector3.forward * Input.GetAxis("Forward") * Time.deltaTime * speed);
+        this.transform.Translate( Vector3.Scale( Vector3.forward, new Vector3(1, 0, 1) ) * Input.GetAxis("Forward") * Time.deltaTime * speed);
         this.transform.Translate(Vector3.left * Input.GetAxis("Left") * Time.deltaTime * speed);
         this.transform.Translate(Vector3.back * Input.GetAxis("Back") * Time.deltaTime * speed);
         this.transform.Translate(Vector3.right * Input.GetAxis("Right") * Time.deltaTime * speed);

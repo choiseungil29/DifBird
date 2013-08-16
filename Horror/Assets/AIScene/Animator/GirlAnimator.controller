@@ -40,13 +40,13 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Girl_Walk
+  m_Name: Walk_Girl
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 6257ab5b99f5a45ef92e8e821d1c15e7, type: 3}
+  - {fileID: 7400000, guid: 53739fb2b86f342b2a762f5f54fc8cd0, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 252, y: 24, z: 0}
+  m_Position: {x: 264, y: 48, z: 0}
   m_IKOnFeet: 1
   m_Mirror: 0
   m_Tag: 
@@ -76,5 +76,5 @@ StateMachine:
       second:
       - {fileID: 110100000}
   m_MotionSetCount: 1
-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_AnyStatePosition: {x: 48, y: 24, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

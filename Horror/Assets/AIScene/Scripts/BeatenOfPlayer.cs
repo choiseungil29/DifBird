@@ -10,7 +10,7 @@ public class BeatenOfPlayer : MonoBehaviour
     private float lastBeatenTime; // uses variable
     private int lastDistance;
 
-    private int PlayerHP = 5;
+    private int PlayerHP = 3;
 
     // Use this for initialization
     void Start()
@@ -24,7 +24,11 @@ public class BeatenOfPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+		if(PlayerHP < 0) {
+			Application.LoadLevel("LoseScene");
+		}
+		
+		Debug.Log("HP : " + PlayerHP);
     }
 
     private IEnumerator BeatenPlayer()
@@ -45,6 +49,7 @@ public class BeatenOfPlayer : MonoBehaviour
                     // beaten, camera shake, camera 2d color rendering
 
                     PlayerHP -= 1;
+					Debug.Log("WTFWTFWTF!!");
 
                     //Stalker.gameObject.SendMessage("AnimHit");
                     Stalker.GetComponent<HitOfGuard>().AnimHit();

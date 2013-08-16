@@ -8,6 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Stone_Flagstone_Ashlar
   m_Shader: {fileID: 7, guid: 0000000000000000e000000000000000, type: 0}
+  m_ShaderKeywords: []
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -15,7 +16,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: bd6b65d5c88bff5479a59243320e0c94, type: 3}
+          m_Texture: {fileID: 2800000, guid: c1ca9ad5dfde547f6a499691ea3244f5, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats: {}
